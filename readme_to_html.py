@@ -10,7 +10,7 @@ with open(args.i, "r") as f:
 
 r = requests.post("https://api.github.com/markdown", json={"text": readme, "mode": "gfm"})
 
-html = "<link href=\"https://unpkg.com/@primer/css/dist/primer.css\" rel=\"stylesheet\" />\n<div class=\"markdown-body\">\n" + r.text + "\n</div>"
+html = "<link href=\"https://unpkg.com/@primer/css@21.2.2/dist/primer.css\" rel=\"stylesheet\" />\n<div class=\"markdown-body\">\n" + r.text + "\n</div>"
 
 with open(args.o, "w") as f:
     f.write(html)
